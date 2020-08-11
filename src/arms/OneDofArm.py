@@ -75,18 +75,14 @@ class OneDofArm:
     
     def forward_kinematics(self, q):
         assert len(q) == self.DOF
-        T_01_a = np.resize([[cos(q[0]), -sin(q[0]), 0, 0],
-                            [sin(q[0]), cos(q[0]), 0, 0],
+        T_01 = np.resize([[cos(q[0]), -sin(q[0]), 0, cos(q[0]) * self.params["length"][0]],
+                            [sin(q[0]), cos(q[0]), 0, sin(q[0]) * self.params["length"][0]],
                             [0, 0, 1, 0],
                             [0, 0, 0, 1]], (4, 4))
-        T_01_b = np.resize([[1, 0, 0, self.params["length"][0]],
-                            [0, 1, 0, 0],
-                            [0, 0, 1, 0],
-                            [0, 0, 0, 1]], (4, 4))
-        T_01 = np.dot(T_01_a, T_01_b)
+        T = T_01
         
         # Return x and y
-        fk = np.dot(T_01, np.resize([0, 0, 0, 1], (4, 1)))
+        fk = np.dot(T, np.resize([0, 0, 0, 1], (4, 1)))
         return fk[0:2]
     
     def inverse_kinematics(self, xy, q_init=None):

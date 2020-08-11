@@ -8,14 +8,14 @@ from src.arms import *
 '''This script illustrates the dynamic behavior of a robot model without control inputs '''
 
 # Create robot
-q_init = np.array([[-math.pi / 4], [0.0]])
-robot = TwoDofArm()
+q_init = np.array([[-math.pi / 4], [0.0], [0.0], [0.0], [0.0]])
+robot = FiveDofArm()
 robot.set_q_init(q_init)
 
 # Print robot information
-print(robot)
-robot.plot()
-plt.show()
+# print(robot)
+# robot.plot()
+# plt.show()
 
 # Create simulator without controller
 sim = Simulator(robot)

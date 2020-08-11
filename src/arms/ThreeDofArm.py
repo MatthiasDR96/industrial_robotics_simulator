@@ -87,34 +87,20 @@ class ThreeDofArm:
     
     def forward_kinematics(self, q):
         assert len(q) == self.DOF
-        T_01_a = np.resize([[cos(q[0]), -sin(q[0]), 0, 0],
-                            [sin(q[0]), cos(q[0]), 0, 0],
+        T_01 = np.resize([[cos(q[0]), -sin(q[0]), 0, cos(q[0]) * self.params["length"][0]],
+                            [sin(q[0]), cos(q[0]), 0, sin(q[0]) * self.params["length"][0]],
                             [0, 0, 1, 0],
                             [0, 0, 0, 1]], (4, 4))
-        T_01_b = np.resize([[1, 0, 0, self.params["length"][0]],
-                            [0, 1, 0, 0],
-                            [0, 0, 1, 0],
-                            [0, 0, 0, 1]], (4, 4))
-        T_01 = np.dot(T_01_a, T_01_b)
-        T_12_a = [[cos(q[1]), -sin(q[1]), 0, 0],
-                  [sin(q[1]), cos(q[1]), 0, 0],
+        T_12 = [[cos(q[1]), -sin(q[1]), 0, cos(q[1]) * self.params["length"][1]],
+                  [sin(q[1]), cos(q[1]), 0, sin(q[1]) * self.params["length"][1]],
                   [0, 0, 1, 0],
                   [0, 0, 0, 1]]
-        T_12_b = np.resize([[1, 0, 0, self.params["length"][1]],
-                            [0, 1, 0, 0],
-                            [0, 0, 1, 0],
-                            [0, 0, 0, 1]], (4, 4))
-        T_12 = np.dot(T_12_a, T_12_b)
-        T_23_a = [[cos(q[2]), -sin(q[2]), 0, 0],
-                  [sin(q[2]), cos(q[2]), 0, 0],
+        T_23 = [[cos(q[2]), -sin(q[2]), 0, cos(q[2]) * self.params["length"][2]],
+                  [sin(q[2]), cos(q[2]), 0, sin(q[2]) * self.params["length"][2]],
                   [0, 0, 1, 0],
                   [0, 0, 0, 1]]
-        T_23_b = np.resize([[1, 0, 0, self.params["length"][2]],
-                            [0, 1, 0, 0],
-                            [0, 0, 1, 0],
-                            [0, 0, 0, 1]], (4, 4))
-        T_23 = np.dot(T_23_a, T_23_b)
-        fk = np.dot(np.dot(T_01, np.dot(T_12, T_23)), np.resize([0, 0, 0, 1], (4, 1)))
+        T = np.dot(T_01, np.dot(T_12, T_23))
+        fk = np.dot(T, np.resize([0, 0, 0, 1], (4, 1)))
         return fk[0:2]
     
     def inverse_kinematics(self, xy, q_init=None):
