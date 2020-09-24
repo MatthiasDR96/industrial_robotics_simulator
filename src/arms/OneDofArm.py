@@ -28,6 +28,9 @@ class OneDofArm:
         self.q = np.array([[0.0]])
         self.dq = np.array([[0.0]])
 
+        # Arm state
+        self.tau_limit = 20  # Nm
+
         # Simulation time
         self.time_elapsed = 0.0
 

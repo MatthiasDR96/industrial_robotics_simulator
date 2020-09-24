@@ -51,10 +51,9 @@ In the arms folder, all robot models are implemented:
 -   One degree of freedom link
 -   Two degree of freedom link
 -   Three degree of freedom link
--   Five degree of freedom link
 -   UR5 robot model
 
-Only the one, two, and three dof links can be used in the simulation. The other model classes just show how a general
+Only the one, two, and three dof links can be used in the simulation. The UR5 model class just shows how a general
 robot model including kinematics and dynamics can be set up calculating Jacobians, inertia, and gravity matrices.
 For complex robots, the Coriolis matrix is not calculated due to complexity. Errors in the control due to this
 mismodeling are compensated by feedback terms.
