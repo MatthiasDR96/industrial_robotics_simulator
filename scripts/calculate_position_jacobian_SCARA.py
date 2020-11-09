@@ -126,17 +126,6 @@ def calculate_jacobian(name):
     return J
 
 
-def inverse_kinematics(self, xy, q_init=None):
-    if q_init is None:
-        q_init = self.q_sym
-
-    def distance_to_target(q, xy):
-        fxy = self.forward_kinematics(q)
-        return np.sqrt((fxy[0] - xy[0]) ** 2 + (fxy[1] - xy[1]) ** 2)
-
-    return scipy.optimize.minimize(fun=distance_to_target, x0=q_init, args=([xy[0], xy[1]]))['x']
-
-
 def calculate_transform(name):
     # Transformation matrices from base to each joint
     if name == 'joint1':

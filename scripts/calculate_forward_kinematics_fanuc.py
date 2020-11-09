@@ -127,5 +127,5 @@ if __name__ == "__main__":
     pos_1 = [math.pi / 4, math.pi / 6, 0, 0, 0, 0]
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
-    plot([T01, T02, T03, T04, T05, T], home, ax)
+    plot([T01, T02, T03, T04, T05, T], pos_1, ax)
     plt.show()
