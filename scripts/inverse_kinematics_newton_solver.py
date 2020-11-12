@@ -48,7 +48,7 @@ if __name__ == "__main__":
     # Plot initial position
     line1.set_data(arm.position(q_init))
     plt.draw()
-    plt.pause(0.01)
+    plt.pause(2)
 
     # Activate interactive plot
     plt.ion()
@@ -85,12 +85,13 @@ if __name__ == "__main__":
         # Plot
         line1.set_data(position)
         plt.draw()
-        plt.pause(0.1)
+        plt.pause(2)
 
         # Stop criterium
         if np.linalg.norm(arm.forward_kinematics(q) - xd) < position_tolerance:
             break
 
+    plt.show()
     # Check correctness
     print("\nAmount of iterations:" + str(i + 1))
     print("\nForward kinematics:")
