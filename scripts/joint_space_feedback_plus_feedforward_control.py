@@ -5,7 +5,7 @@ from src.controllers.joint_space_feedback_plus_feedforward_controller import *
 """ This script uses feedback plus feedforward motion control to move to a target."""
 
 # Create robot
-q_init = np.array([[3 * math.pi / 4], [0.0]])
+q_init = np.array([[-math.pi / 2], [0.0]])
 robot = TwoDofArm()
 robot.set_q_init(q_init)
 
@@ -13,7 +13,7 @@ robot.set_q_init(q_init)
 controller = Control(robot)
 
 # Create target pose in joint space
-q_des = np.array([[-math.pi / 4], [math.pi / 4]])
+q_des = np.array([[-math.pi / 4], [0.0]])
 controller.set_joint_space_target(q_des)
 
 # Run animation
