@@ -1,7 +1,7 @@
 from src.Interpolator import *
 from src.Simulator import *
 from src.arms import *
-from src.controllers.task_space_impedance_controller import *
+from src.controllers.task_space_admittance_controller import *
 
 """ This script uses joint impedance control to track a trajectory under an external force."""
 

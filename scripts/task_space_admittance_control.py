@@ -1,6 +1,6 @@
 from src.Simulator import *
 from src.arms import *
-from src.controllers.task_space_impedance_controller import *
+from src.controllers.task_space_admittance_controller import *
 
 """ This script uses task impedance control to move to a target under an external force."""
 

@@ -28,7 +28,7 @@ class Control:
         # Control parameters
         self.kp = 10
         self.kd = math.sqrt(self.kp)
-        self.ki = 0
+        self.ki = 10
         self.eint = 0
         self.qprev = self.arm.q
 
