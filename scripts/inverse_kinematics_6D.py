@@ -1,5 +1,5 @@
 import scipy.optimize
-from src.plot import *
+from industrial_robotics_simulator.plot import *
 import math
 import sympy as sp
 import matplotlib.pyplot as plt

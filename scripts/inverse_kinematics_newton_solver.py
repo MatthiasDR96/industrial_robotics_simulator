@@ -3,7 +3,7 @@ from math import *
 import matplotlib.pyplot as plt
 import numpy as np
 
-from src.arms.TwoDofArm import TwoDofArm
+from industrial_robotics_simulator.arms.TwoDofArm import TwoDofArm
 
 '''This script illustrates an inverse kinematic solver '''
 

@@ -1,6 +1,6 @@
-from src.Simulator import *
-from src.arms import *
-from src.controllers.joint_space_admittance_controller import *
+from industrial_robotics_simulator.Simulator import *
+from industrial_robotics_simulator.arms import *
+from industrial_robotics_simulator.controllers.joint_space_admittance_controller import *
 
 """ This script uses joint impedance control to move to a target under an external force."""
 

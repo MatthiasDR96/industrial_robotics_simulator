@@ -73,8 +73,8 @@ class TwoDofArm:
         y1 = self.params["length"][0] * np.sin(q[0])
         x2 = self.params["length"][1] * np.cos(q[0] + q[1])
         y2 = self.params["length"][1] * np.sin(q[0] + q[1])
-        x = np.cumsum([0, x1, x2])
-        y = np.cumsum([0, y1, y2])
+        x = np.cumsum([0, x1[0], x2[0]])
+        y = np.cumsum([0, y1[0], y2[0]])
         return x, y
 
     def reset(self, q, dq):

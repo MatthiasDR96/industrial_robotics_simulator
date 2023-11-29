@@ -1,8 +1,8 @@
 import math
 
-from src.Simulator import *
-from src.arms import *
-from src.controllers.task_space_force_controller import *
+from industrial_robotics_simulator.Simulator import *
+from industrial_robotics_simulator.arms import *
+from industrial_robotics_simulator.controllers.task_space_force_controller import *
 
 """ This script uses force control and simulates contact with a wall at x=1.1m."""
 

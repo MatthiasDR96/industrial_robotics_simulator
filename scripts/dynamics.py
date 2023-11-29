@@ -1,7 +1,7 @@
 import math
 
-from src.Simulator import *
-from src.arms import *
+from industrial_robotics_simulator.Simulator import *
+from industrial_robotics_simulator.arms import *
 
 '''This script illustrates the dynamic behavior of a robot model without control inputs '''
 

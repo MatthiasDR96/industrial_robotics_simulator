@@ -1,6 +1,6 @@
-from src.Simulator import *
-from src.arms import *
-from src.controllers.joint_space_feedback_controller import *
+from industrial_robotics_simulator.Simulator import *
+from industrial_robotics_simulator.arms import *
+from industrial_robotics_simulator.controllers.joint_space_feedback_controller import *
 
 """ This script uses feedback motion control to move to a target."""
 

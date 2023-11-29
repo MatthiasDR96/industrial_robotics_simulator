@@ -1,7 +1,7 @@
 from math import *
 
 import matplotlib.pyplot as plt
-from src.plot import *
+from industrial_robotics_simulator.plot import *
 import sympy as sp
 from matplotlib.pyplot import *
 from mpl_toolkits.mplot3d import Axes3D

@@ -2,7 +2,7 @@ from math import *
 
 import matplotlib.pyplot as plt
 
-from src.arms import *
+from industrial_robotics_simulator.arms import *
 
 '''This script calculates the forward kinematics of a robot model '''
 

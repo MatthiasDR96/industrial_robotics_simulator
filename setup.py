@@ -1,23 +1,12 @@
-import setuptools
+from setuptools import setup
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-
-setuptools.setup(
+setup(
     name="industrial_robotics_simulator",
-    version="0.0.1",
+    version="1.0.0",
     author="Matthias De Ryck",
     author_email="matthias.deryck@kuleuven.be",
-    description="A package for simple robot control as an addition to the "
-                "lecture Industrial Robotics at the KU Leuven Campus in Bruges",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
+    description="A package for simple robot control as an addition to the lecture Industrial Robotics at the KU Leuven Campus in Bruges",
     url="https://github.com/MatthiasDR96/industrial_robotics_simulator.git",
-    packages=setuptools.find_packages(),
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires='>=3.6',
+    packages=['industrial_robotics_simulator', 'industrial_robotics_simulator.arms', 'industrial_robotics_simulator.controllers'],
+    package_dir={'':  'src'}
 )

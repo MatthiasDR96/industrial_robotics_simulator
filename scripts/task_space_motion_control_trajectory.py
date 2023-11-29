@@ -1,7 +1,7 @@
-from src.Interpolator import *
-from src.Simulator import *
-from src.arms import *
-from src.controllers.task_space_motion_controller import *
+from industrial_robotics_simulator.Interpolator import *
+from industrial_robotics_simulator.Simulator import *
+from industrial_robotics_simulator.arms import *
+from industrial_robotics_simulator.controllers.task_space_motion_controller import *
 
 """ This script uses task space motion control to track a trajectory."""
 

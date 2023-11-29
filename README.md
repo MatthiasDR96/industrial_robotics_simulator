@@ -5,8 +5,8 @@ of Industrial Robotics at the KU Leuven Campus in Bruges.
 
 ## Installation
 
-It is sufficient to just download Python (3.6) and to download the package as a .zip folder from github.
-Once the package is opened in your favorite IDE (I recommend Pycharm), you're ready to go.
+It is sufficient to just download Python (3.6) and clone the package from github.
+Once the package is opened in your favorite IDE, you're ready to go.
 
 ## Simulator Structure
 

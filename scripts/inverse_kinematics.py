@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from src.arms import *
+from industrial_robotics_simulator.arms import *
 
 '''This script calculates the inverse kinematics of a robot model '''
 

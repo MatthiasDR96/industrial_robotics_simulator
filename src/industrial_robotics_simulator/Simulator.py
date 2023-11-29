@@ -159,6 +159,5 @@ class Simulator:
         self.line_tau.set_data(self.time_axis, self.tau_list)
 
     def simulate(self):
-        _ = animation.FuncAnimation(self.fig, self.animate, interval=self.interval,
-                                    frames=self.frames, init_func=self.init)
+        _ = animation.FuncAnimation(self.fig, self.animate, interval=self.interval, frames=self.frames, init_func=self.init)
         plt.show()
