@@ -41,6 +41,7 @@ def interpolate_cubic(p1, p2, k_traj, t):
     dtraj_list.append(tv)
     ddtraj_list.append(tv)
     dddtraj_list.append(tv)
+    print(traj_list)
     traj = np.asarray(traj_list)
     dtraj = np.asarray(dtraj_list)
     ddtraj = np.asarray(ddtraj_list)
